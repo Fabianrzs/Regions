@@ -1,4 +1,4 @@
-﻿namespace Regiones;
+﻿namespace Regions;
 
 public interface IUserTimeZoneAccessor
 {

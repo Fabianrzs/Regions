@@ -1,4 +1,4 @@
-using Regiones;
+using Regions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,7 +32,7 @@ app.MapGet("/api/local/date", () =>
         Time = TimeOnly.FromDateTime(dateTime).ToString("HH:mm:ss")
     };
 })
-.WithName("Region");
+.WithName("Regions");
 
 
 await app.RunAsync();

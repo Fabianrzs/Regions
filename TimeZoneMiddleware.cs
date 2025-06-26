@@ -1,4 +1,4 @@
-﻿namespace Regiones;
+﻿namespace Regions;
 
 internal class TimeZoneMiddleware(RequestDelegate next)
 {
@@ -6,7 +6,7 @@ internal class TimeZoneMiddleware(RequestDelegate next)
 
     public async Task InvokeAsync(HttpContext context)
     {
-        var timeZoneId = context.Request.Headers["Time-Zone"].FirstOrDefault();
+        var timeZoneId = context.Request.Headers["X-Time-Zone"].FirstOrDefault();
 
         if (!string.IsNullOrWhiteSpace(timeZoneId))
         {
