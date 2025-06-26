@@ -1,0 +1,49 @@
+@Regiones_HostAddress = http://localhost:5028/api/
+
+### Bogotá (UTC-5)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+Time-Zone: America/Bogota
+
+###
+
+### Tokio (UTC+9)
+GET {{Regiones_HostAddress}}local/date/
+Accept: application/json
+Time-Zone: Asia/Tokyo
+
+###
+
+### Nueva York (UTC-5 o UTC-4 con DST)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+Time-Zone: America/New_York
+
+###
+
+### Londres (UTC+0 o UTC+1 con DST)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+Time-Zone: Europe/London
+
+###
+
+### Moscú (UTC+3)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+Time-Zone: Europe/Moscow
+
+###
+
+### Sydney (UTC+10 o UTC+11 con DST)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+Time-Zone: Australia/Sydney
+
+###
+
+### UTC sin zona horaria enviada (fallback)
+GET {{Regiones_HostAddress}}local/date
+Accept: application/json
+
+###
